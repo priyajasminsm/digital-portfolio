@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Name-Portfolio</title>
+        <style>
+            body
+            {
+                font-family:Arial, Helvetica, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: rgb(239, 250, 215);
+            }
+            header
+            {
+                background-color: black;
+                color: antiquewhite;
+                text-align: center;
+                padding: 2rem 0;
+                position: relative;
+            }
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+            .logo {
+                width: 100px;
+                height: 100px;
+                border-radius: 75%;
+                object-fit: cover;
+                position: absolute;
+                top: 50px;
+                left: 120px;
+            }
+            .hero{
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+            nav
+            {
+                background-color: black;
+                color: antiquewhite;
+                text-align: center;
+            }
+            nav ul
+            {
+                list-style-type: none;
+                padding: 10px;
+            }
+            nav ul li
+            {
+                display: inline;
+                margin: 0 20px;
+            }
+            nav ul li a
+            {
+                text-decoration: none;
+                color: antiquewhite;
+            }
+            .section-content
+            {
+                background-color: antiquewhite;
+                padding: 2rem;
+                margin: 1rem;
+                border-radius: 20px;
+                box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .download-button
+            {
+                background-color: black;
+                color: antiquewhite;
+                padding: 1rem 0;
+                text-decoration: none;
+                border-radius: 20px;
+                display: inline-block;
+                margin-top: 10px;
+            }
+            .download-button:hover
+            {
+                background-color: skyblue;
+            }
+            footer
+            {
+                text-align: center;
+                padding: 1rem 0;
+                background-color: black;
+                color: antiquewhite;
+            }
+            ul{
+                list-style-type:circle;
+                padding-left: 20px;
+            }
+            td
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+            <!-- Add your profile picture here -->
+            <img src="Priya Jasmin.jpg" class="logo">
+            <h1>Priya Jasmin.S.M</h1>
+            </div>
+        </header>
+             <nav>
+                <ul>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#education">Education</a></li>
+                   <li><a href="#skill">Skill</a></li>
+                   <li><a href="#project">Project</a></li>
+                   <li><a href="#resume">Resume</a></li>
+                 </ul>
+             </nav>
+             <section id="about">
+                <div class="section-content">
+                <h2>About Me</h2>
+                <p>Hi ! This is Priya Jasmin.S.M and I am a Computer Science student.</p>
+                </div>
+            </section>
+            <section id="education">
+                <div class="section-content">
+                    <h2>Education</h2>
+                    <p>Manonmaniyam Sundaranar Unversity </p>
+                    <table border="1">
+                        <tr>
+                            <th>Standard&Degree</th>
+                            <th>College&School</th>
+                            <th>Department</th>
+                        </tr>
+                        <tr>
+                            <td>10th</td>
+                            <td>Government Higher Secondary School</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>12th</td>
+                            <td>Government Higher Secondary School</td>
+                            <td>Bio-Maths</td>
+                        </tr>
+                        <tr>
+                            <td>Bsc</td>
+                            <td>Sree Devi Kumari Women's College</td>
+                            <td>Computer Science</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <section id="skill">
+                <div class="section-content">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Artifical Intelligence</li>
+                    <li>Machine Learning</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ul>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="section-content">
+                <h2>Projects</h2>
+                <ul>
+                    <li><a href="#">Project 1</a></li>
+                    <li><a href="#">Project 2</a></li>
+                </ul>
+            </div>
+        </section>
+        <section id="resume">
+            <center>
+                <div class="section-content">
+                    <h2>Resume</h2>
+                    <a href="Priya jasmin resume.jpg" class="download-button">Download CV</a>
+                </div>
+            </center>
+        </section>
+        <footer>
+            <p>&copy; 2023 S.M.Priya Jasmin</p>
+        </footer>
+        <script>
+            document.querySelectorAll('a[href^="#"]').foreach(anchor =>{
+                anchor.addEventListener('click',function(e) {
+                    e.preventDefault();
+
+                    const targetId=this.getAttribute('href').substring(1);
+                    const targetElement=document.getElementById(targetId);
+
+                    if(targetElement){
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+            });
+        });
+    </script>
+</body>
+</html>
